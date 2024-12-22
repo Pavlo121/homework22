@@ -1,0 +1,20 @@
+<h1>Статистика (Raw SQL)</h1>
+
+<h2>Автори з книгами, які мають понад 10 відгуків</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Ім'я автора</th>
+        <th>Кількість книг</th>
+    </tr>
+    {% for author in authors %}
+    <tr>
+        <td>{{ author.0 }}</td>
+        <td>{{ author.1 }}</td>
+        <td>{{ author.2 }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Загальна кількість книг</h2>
+<p>{{ book_count }}</p>

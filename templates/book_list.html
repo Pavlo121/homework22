@@ -1,0 +1,11 @@
+<h1>Список книг</h1>
+
+{% for book in books %}
+    <h2>{{ book.title }}</h2>
+    <p>Автор: {{ book.author.name }}</p>
+    <ul>
+        {% for review in book.reviews.all %}
+            <li>{{ review.content }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
